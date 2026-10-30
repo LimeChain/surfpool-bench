@@ -18,6 +18,9 @@ ROOT=Path(__file__).resolve().parents[1]
 
 async def main(args):
     if not re.fullmatch(r'[A-Za-z0-9_-]+',args.run):raise ValueError('Run name must contain only letters, digits, hyphens and underscores')
+    if args.case == 'SP005':
+        from build_counter import ensure_counter
+        ensure_counter()
     trial_dir=ROOT/'runs'/args.run
     if (trial_dir/(args.case.lower()+'-'+args.agent)).exists():raise FileExistsError('Use a new run name; existing evidence must not be overwritten')
     from surfbench.fixture_store import validate_saved, copy_saved

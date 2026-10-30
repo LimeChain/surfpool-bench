@@ -6,6 +6,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+from build_counter import ensure_counter
 
 ROOT = Path(__file__).resolve().parents[1]
 TAG = 'surfbench-harbor:0.2.0'
@@ -13,6 +14,7 @@ VERIFIER_TAG = 'surfbench-harbor-verifier:0.2.0'
 
 
 def main():
+    ensure_counter()
     base_tags = ['surfbench-runtime:0.1.1','surfbench-verifier:0.1.1',
                  'surfbench-egress:0.1.1','surfbench-proxy:0.1.1']
     if subprocess.run(['docker','image','inspect',*base_tags],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL).returncode:

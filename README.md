@@ -21,9 +21,11 @@ python scripts/build_native.py
 python scripts/prepare_native_codex.py
 ```
 
-`build_native.py` builds the runtime, verifier, network sidecar, mainnet proxy, and Claude image. It downloads Surfpool 1.7.0 and checks the archive SHA-256. `prepare_native_codex.py` adds the pinned Codex CLI image and prepares its task profile. Skip that second build if you only want Claude or reference solutions. Keep Docker images unchanged during a comparison; build manifests are written to `reports/`.
+`build_native.py` first compiles the counter fixture, then builds the runtime, verifier, network sidecar, mainnet proxy, and Claude image. It downloads Surfpool 1.7.0 and checks the archive SHA-256. `prepare_native_codex.py` adds the pinned Codex CLI image and prepares its task profile. Skip that second build if you only want Claude or reference solutions. Keep Docker images unchanged during a comparison; build manifests are written to `reports/`.
 
-The fixed fixtures, native tasks, and compiled counter fixture are already included. You do not need to generate fixtures or compile a Solana program.
+The fixed synthetic fixtures and native task definitions are committed and do not need regeneration. Compiled binaries, Docker image exports, downloaded archives, caches, and run outputs are excluded from Git; Dockerfiles and Compose files remain tracked build inputs.
+
+The counter build automatically downloads checksum-pinned [Anza platform-tools v1.58](https://github.com/anza-xyz/platform-tools/releases/tag/v1.58) into `.cache/` on Apple Silicon macOS or Linux x86_64/aarch64 (a one-time 430–530 MB download). To use an existing installation, set `SURFBENCH_SBF_TOOLCHAIN` to its root containing `llvm/bin`. Other hosts require a compatible v1.58 installation through that variable. The generated `fixtures/counter.so` must match the original SHA-256 in `fixtures/PROVENANCE.json`; a mismatch stops setup before any images are built. It is reused on subsequent builds. To build only this fixture, run `python scripts/build_counter.py`.
 
 ## Run
 
