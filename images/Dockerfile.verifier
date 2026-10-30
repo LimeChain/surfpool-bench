@@ -1,0 +1,6 @@
+FROM surfbench-base:1.7.0
+COPY requirements/verifier.lock /tmp/requirements.lock
+RUN pip install --no-cache-dir -r /tmp/requirements.lock
+COPY src/surfbench /opt/verifier/surfbench
+ENV PYTHONPATH=/opt/verifier
+RUN mkdir -p /tests && printf '#!/bin/sh\nset -eu\npython -m surfbench.grade /protected /logs/verifier\n' > /tests/test.sh && chmod 755 /tests/test.sh

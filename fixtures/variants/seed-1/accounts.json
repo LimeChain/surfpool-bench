@@ -1,0 +1,13 @@
+{
+  "alice": "GoJHYsfWJnYGqF5XFLTWmL8mSNWLgnMgjqApj444Bgvu",
+  "bob": "7XkRSDoqLkh7jyPuEQbrLQrV1E9bdk7QJgrKkhe2krSw",
+  "payer": "5XftzkZQq83Jo1QWQEkwWQhPdbMaiuU2ktY3V2jczxvF",
+  "mint": "HE35u1sXvB52ubSngpeyD5aqYF4DqYSM8bMQBPe9kYnL",
+  "sentinel": "BqfFconmESAxUAQie2NpjvNFS19s7R3YCPSnrZozGjpk",
+  "extra": "7nn9B744GT1rTbtZZh4pZLUdjjBQR5hkjeV9HTeg3UR8",
+  "program": "AMNzVqjE7Jrw9mgxsRg3wtFScgDKTEQqmXme3t6oT1mu",
+  "counter": "grBbtexFV3P9u7zf8NGjSRRE1MefRMdL1kN5EHAJpVn",
+  "alice_token": "81PikrfBDT741Sx8SP1xtEiySb5DCubQtDN1T1LbV6yW",
+  "bob_token": "7YngB5pGV7Qr34q4d9Ta5PfTw4zvXVMW4sd49TTxzaij",
+  "oracle": "7UVimffxr9ow1uXYxsr4LHAcV58mLzhmwaeKvJ1pjLiE"
+}

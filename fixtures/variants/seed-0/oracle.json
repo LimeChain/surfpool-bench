@@ -1,0 +1,10 @@
+{
+  "address": "7UVimffxr9ow1uXYxsr4LHAcV58mLzhmwaeKvJ1pjLiE",
+  "template_id": "pyth-price-feed-v2",
+  "account_type": "PriceUpdateV2",
+  "feed_id": "0xef0d8b6fda2ceba41da15d4095d1da392a0d2f8ed0c6c7bc0f4cfac8c280b56d",
+  "price_field": "price_message.price",
+  "exponent": -8,
+  "initial_price": 100,
+  "fetch_before_use": false
+}

@@ -1,0 +1,14 @@
+{
+  "synthetic_generator": "src/surfbench/fixtures.py",
+  "counter": {
+    "source": "counter.c",
+    "abi": "counter-abi.json",
+    "artifact": "counter.so",
+    "sha256": "7d0e105cffd63459baf706e01200db1cd0364c18a2c790cc3019c946ab20643b",
+    "compiler": "Anza platform-tools v1.58, clang 22.1.2, sbf target v1",
+    "verification": "scripts/verify_counter_build.py",
+    "linker_script_source": "https://github.com/anza-xyz/agave/blob/v4.0.0/platform-tools-sdk/sbf/c/sbf.ld",
+    "toolchain_archive": "https://github.com/anza-xyz/platform-tools/releases/download/v1.58/platform-tools-osx-aarch64.tar.bz2",
+    "toolchain_archive_sha256": "17a89dae89936f045789d484140fd19a7bd992d4522d4ab0e9adeae565e35d12"
+  }
+}

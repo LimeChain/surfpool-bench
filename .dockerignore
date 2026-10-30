@@ -1,0 +1,17 @@
+.git
+.venv
+.pytest_cache
+**/__pycache__
+**/*.pyc
+**/*.egg-info
+.env
+.env.*
+auth.json
+credentials.json
+jobs
+runs
+reports
+tests
+fixtures
+tasks*
+scripts

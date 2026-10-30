@@ -1,0 +1,9 @@
+{
+  "datasource": "http://mainnet-proxy:8888",
+  "cluster": "mainnet-beta",
+  "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+  "token_account": "HLmqeL62xR1QoZ1HKKbXRrdN1p3phKpxRMb2VVopvBBz",
+  "token_program": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+  "provenance": "Public Raydium SOL-USDC vault, independently checked against mainnet account bytes on 2026-10-29. Values must be fetched live for each trial.",
+  "address_source": "https://github.com/raydium-io/raydium-ui/blob/master/src/utils/pools.ts"
+}

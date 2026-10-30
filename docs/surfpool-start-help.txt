@@ -1,0 +1,244 @@
+Start a local Surfnet
+
+Usage: surfpool start [OPTIONS]
+
+Options:
+  -h, --help
+          Print help (see a summary with '-h')
+
+Network & Ports:
+  -p, --port <PORT>
+          Bind the JSON-RPC server to this port.
+          
+          Example: surfpool start --port 8080
+          
+          [default: 8899]
+
+  -w, --ws-port <PORT>
+          Bind the WebSocket server to this port
+          
+          [default: 8900]
+
+  -o, --host <HOST>
+          Bind RPC, WebSocket, and Studio services to this host.
+          
+          Example: surfpool start --host 0.0.0.0
+          
+          [default: 127.0.0.1]
+
+  -u, --rpc-url <RPC_URL>
+          Fork from this datasource RPC URL. Cannot be used with --network.
+          
+          This can also be set with SURFPOOL_DATASOURCE_RPC_URL.
+          
+          Example: surfpool start --rpc-url https://api.mainnet-beta.solana.com
+          
+          [env: SURFPOOL_DATASOURCE_RPC_URL=]
+
+  -n, --network <NETWORK>
+          Fork from a predefined Solana network. Cannot be used with --rpc-url.
+          
+          Example: surfpool start --network devnet
+
+          Possible values:
+          - mainnet: Solana Mainnet-Beta (https://api.mainnet-beta.solana.com)
+          - devnet:  Solana Devnet (https://api.devnet.solana.com)
+          - testnet: Solana Testnet (https://api.testnet.solana.com)
+
+      --offline
+          Run without a remote RPC datasource. Use this to simulate an offline environment.
+          
+          Example: surfpool start --offline
+
+      --genesis-hash <HASH>
+          Report this hash from getGenesisHash instead of the datasource's, so clients identify the surfnet as that cluster. Offline, the default is a hash that changes on every start.
+          
+          Example: surfpool start --offline --genesis-hash 5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d
+
+Project & Deployment:
+  -m, --manifest-file-path <MANIFEST_PATH>
+          Path to the runbook manifest
+          
+          [default: ./txtx.yml]
+
+      --no-deploy
+          Disable automatic program deployments
+
+  -r, --runbook <RUNBOOK>
+          Runbook ID to execute after startup. Can be specified multiple times.
+          
+          Example: surfpool start --runbook deployment --runbook seed
+          
+          [default: deployment]
+
+  -i, --runbook-input <INPUT_PATH>
+          Provide an input file to runbook execution. Can be specified multiple times.
+          
+          Example: surfpool start --runbook-input myInputs.json
+
+  -y, --yes
+          Skip runbook generation prompts
+
+      --watch
+          Watch programs in your artifacts folder (default: `target/deploy`), and automatically re-execute the startup runbooks when the `.so` files change. (eg. surfpool start --watch)
+
+      --artifacts-path <ARTIFACTS_PATH>
+          Directory containing .so program artifacts. Defaults to target/deploy.
+          
+          Example: surfpool start --artifacts-path ./target/deploy/debug
+
+      --legacy-anchor-compatibility
+          Use defaults suited for legacy Anchor test suites
+
+      --anchor-test-config-path <TEST_TOML>
+          Anchor Test.toml file to inspect. Can be specified multiple times.
+          
+          Example: surfpool start --anchor-test-config-path ./path/to/Test.toml
+
+Accounts & State:
+  -a, --airdrop <PUBKEY>
+          Pubkey to airdrop SOL to at startup. Can be specified multiple times.
+          
+          Example: surfpool start --airdrop <PUBKEY> --airdrop <PUBKEY>
+
+  -k, --airdrop-keypair-path <KEYPAIR_PATH>
+          Keypair path whose pubkey should receive an airdrop. Can be specified multiple times.
+          
+          Example: surfpool start --airdrop-keypair-path ~/.config/solana/id.json
+          
+          [default: ~/.config/solana/id.json]
+
+  -q, --airdrop-amount <LAMPORTS>
+          Quantity of lamports to airdrop to each address on startup. Set to 0 to skip startup airdrops entirely. Values greater than 0 but below the rent-exempt minimum are rejected and result in airdrops being skipped
+          
+          [default: 10000000000000]
+
+      --snapshot <SNAPSHOT_PATH>
+          JSON account snapshot to preload. Can be specified multiple times.
+          
+          The snapshot format matches the surfnet_exportSnapshot RPC output. Account values can be null to fetch the account from the remote RPC. Later files override earlier files for duplicate keys.
+          
+          Example: surfpool start --snapshot ./snapshot1.json --snapshot ./snapshot2.json
+
+      --db <DB_URL>
+          Database connection URL for persistent Surfnet state.
+          
+          Use ":memory:" for an in-memory SQLite database. Use a filename ending in .sqlite for on-disk SQLite. PostgreSQL URLs require building from source with the postgres feature enabled.
+
+      --surfnet-id <SURFNET_ID>
+          Storage namespace for this Surfnet instance
+          
+          [default: default]
+
+Runtime & UI:
+      --no-tui
+          Print logs instead of launching the terminal UI dashboard.
+          
+          Example: surfpool start --no-tui
+
+      --no-studio
+          Disable Surfpool Studio
+
+  -s, --studio-port <PORT>
+          Bind Studio to this port
+          
+          [default: 18488]
+
+      --daemon
+          Run Surfpool as a background process
+
+      --ci
+          Use settings suitable for CI. This disables the TUI, Studio, instruction profiling, and log output.
+
+SVM Behavior:
+  -t, --slot-time <MILLISECONDS>
+          Slot time in milliseconds
+          
+          [default: 250]
+
+  -b, --block-production-mode <MODE>
+          Block production mode
+          
+          [default: clock]
+
+  -f, --feature <FEATURE_PUBKEY>
+          Enable an SVM feature by pubkey. Can be specified multiple times.
+          
+          Providing feature names is deprecated. Previously supported names still work, but support will be removed in a future release.
+
+      --disable-feature <FEATURE_PUBKEY>
+          Disable an SVM feature by pubkey. Can be specified multiple times.
+          
+          Providing feature names is deprecated. Previously supported names still work, but support will be removed in a future release.
+
+      --features-all
+          Enable all SVM features from agave-feature-set
+
+      --skip-signature-verification
+          Skip transaction signature verification
+
+      --skip-blockhash-check
+          Skip transaction blockhash validation
+
+Observability & Performance:
+  -g, --geyser-plugin-config <PLUGIN_CONFIG_PATH>
+          Geyser plugin config file to load. Can be specified multiple times.
+          
+          Example: surfpool start --geyser-plugin-config plugin1.json --geyser-plugin-config plugin2.json
+
+      --disable-instruction-profiling
+          Disable instruction profiling
+
+  -c, --max-profiles <COUNT>
+          Transaction profiles to retain in memory. Higher values increase memory usage.
+          
+          Example: surfpool start --max-profiles 2000
+          
+          [default: 200]
+
+      --log-bytes-limit <BYTES>
+          Maximum bytes stored for each transaction log. Set to 0 for unlimited logs.
+          
+          Example: surfpool start --log-bytes-limit 64000
+          
+          [default: 10000]
+
+  -l, --log-level <LEVEL>
+          Simnet log level. Valid values are trace, debug, info, warn, error, or none.
+          
+          Example: surfpool start --log-level debug
+          
+          [default: info]
+
+      --log-path <LOG_DIR>
+          Directory for simnet logs
+          
+          [default: .surfpool/logs]
+
+Examples:
+  Start a local Surfnet:
+    surfpool start
+
+  Fork devnet instead of mainnet:
+    surfpool start --network devnet
+
+  Use a custom datasource RPC URL:
+    surfpool start --rpc-url https://my-custom-rpc-url.com
+
+  Print logs instead of launching the TUI:
+    surfpool start --no-tui
+
+  Start without a remote RPC datasource:
+    surfpool start --offline
+
+  Airdrop SOL to multiple accounts:
+    surfpool start --airdrop <PUBKEY> --airdrop <PUBKEY>
+
+  Load account state from snapshots:
+    surfpool start --snapshot ./snapshot1.json --snapshot ./snapshot2.json
+
+  Redeploy programs when target/deploy changes:
+    surfpool start --watch
+
+  Persist Surfnet state in an on-disk SQLite database:
+    surfpool start --db ./surfnet.sqlite --surfnet-id local-dev

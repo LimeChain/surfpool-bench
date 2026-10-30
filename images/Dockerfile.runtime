@@ -1,0 +1,8 @@
+FROM surfbench-base:1.7.0
+COPY src/surfbench/rpc.py src/surfbench/client.py src/surfbench/__init__.py src/surfbench/wire.py src/surfbench/transactions.py /opt/client/surfbench/
+COPY requirements/runtime.lock /tmp/requirements.lock
+RUN pip install --no-cache-dir -r /tmp/requirements.lock
+RUN chgrp surfnet /usr/local/bin/surfpool && chmod 2755 /usr/local/bin/surfpool
+COPY docs /docs
+RUN printf '#!/bin/sh\nPYTHONPATH=/opt/client exec python -m surfbench.client "$@"\n' > /usr/local/bin/surfbench-client && chmod 755 /usr/local/bin/surfbench-client && mkdir -m 700 /protected
+ENV PYTHONPATH=/opt/client

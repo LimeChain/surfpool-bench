@@ -1,0 +1,71 @@
+schema_version = "1.3"
+[task]
+name = "surfbench/sp001"
+[metadata]
+scenario_id = "SP001"
+scenario_version = "0.2.0"
+title = "Exact SOL balances"
+[agent]
+user = "agent"
+timeout_sec = 600
+[environment]
+docker_image = "surfbench-harbor:0.2.0"
+cpus = 2
+memory_mb = 2048
+network_mode = "allowlist"
+allowed_hosts = ["api.anthropic.com", "claude.ai", "platform.claude.com", "console.anthropic.com"]
+[environment.env]
+SURFBENCH_CASE = "SP001"
+SURFBENCH_FIXTURE_SEED = "${SURFBENCH_FIXTURE_SEED:-0}"
+[environment.healthcheck]
+command = "test -f /protected/setup.complete"
+interval_sec = 1
+timeout_sec = 3
+retries = 60
+[[environment.mcp_servers]]
+name = "surfpool"
+transport = "stdio"
+command = "/usr/local/bin/surfpool"
+args = ["mcp"]
+[verifier]
+environment_mode = "separate"
+timeout_sec = 120
+[[verifier.collect]]
+command = "/protected/collect.sh"
+service = "main"
+user = "root"
+timeout_sec = 60
+[verifier.env]
+SURFBENCH_CASE = "SP001"
+[verifier.environment]
+docker_image = "surfbench-harbor-verifier:0.2.0"
+network_mode = "no-network"
+[solution]
+user = "agent"
+[[artifacts]]
+source = "/protected/evidence.json"
+destination = "trusted/evidence.json"
+[[artifacts]]
+source = "/protected/observations.jsonl"
+destination = "trusted/observations.jsonl"
+[[artifacts]]
+source = "/protected/rpc.pcap"
+destination = "trusted/rpc.pcap"
+[[artifacts]]
+source = "/app/report.json"
+destination = "report.json"
+[[artifacts]]
+source = "/protected/collection.complete"
+destination = "trusted/collection.complete"
+[[artifacts]]
+source = "/protected/fixture-manifest.json"
+destination = "trusted/fixture-manifest.json"
+[[artifacts]]
+source = "/protected/setup.log"
+destination = "trusted/setup.log"
+[[artifacts]]
+source = "/protected/observer.log"
+destination = "trusted/observer.log"
+[[artifacts]]
+source = "/protected/tcpdump.log"
+destination = "trusted/tcpdump.log"

@@ -1,0 +1,35 @@
+{
+  "name": "surfbench_counter",
+  "version": "0.1.0",
+  "format": "custom-sbf-abi",
+  "instructions": [
+    {
+      "name": "initialize",
+      "data_hex": "00",
+      "accounts": [
+        {
+          "name": "counter",
+          "writable": true,
+          "signer": false
+        }
+      ]
+    },
+    {
+      "name": "increment",
+      "data_hex": "01",
+      "accounts": [
+        {
+          "name": "counter",
+          "writable": true,
+          "signer": false
+        }
+      ]
+    }
+  ],
+  "account": {
+    "name": "counter",
+    "size": 8,
+    "encoding": "little-endian unsigned u64",
+    "owner": "program ID from accounts.json"
+  }
+}

@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "surfpool-harbor-suite"
+version = "0.1.1"
+description = "Eight independently verified Surfpool developer tasks for Harbor"
+requires-python = ">=3.12"
+dependencies = ["harbor==0.25.0", "solders==0.28.0", "solana==0.40.1", "websockets==15.0.1", "requests==2.34.2", "scapy==2.6.1", "zstandard==0.25.0"]
+
+[project.optional-dependencies]
+test = ["pytest==9.2.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

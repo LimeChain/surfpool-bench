@@ -1,0 +1,25 @@
+{
+  "fixture_version": "0.1.0",
+  "provenance": "Synthetic local-only test keys; fixed seeds 0\u20135",
+  "generator_sha256": "ef803306609a5647baf4995617d0af563c5251788be22e76d0ea2128a205fbe5",
+  "variants": {
+    "0": {
+      "manifest_sha256": "aaa2bb9d05dca09f0ce3f80f9077665eeb9b2ab7b0e8a81d55265814fce7b515"
+    },
+    "1": {
+      "manifest_sha256": "7fd7f9669f5c7335460e23ea4493fd819ad58667253d56d9a83a682988ce49b0"
+    },
+    "2": {
+      "manifest_sha256": "2b4e82943b473394ef06baf9081c34441230475f2977a79ed991c5273848aa0e"
+    },
+    "3": {
+      "manifest_sha256": "725116e7dbf0265f988f37ce4cb129d6d1e1e071fad0503bb15738759fb7c98f"
+    },
+    "4": {
+      "manifest_sha256": "b2b55209382443cc8b693ea030521dc037a4930167531c7546d547df23110f6a"
+    },
+    "5": {
+      "manifest_sha256": "edd766f62e571b8877389b64110f825743b7fc5a65400a31fd8e8a096df7d3d1"
+    }
+  }
+}

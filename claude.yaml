@@ -1,0 +1,17 @@
+# Run from this suite directory: harbor run -c claude.yaml
+# Authentication comes from ANTHROPIC_API_KEY or CLAUDE_CODE_OAUTH_TOKEN.
+n_attempts: 1
+n_concurrent_trials: 3
+jobs_dir: jobs
+environment:
+  type: docker
+  import_path: surfbench.docker_environment:SurfbenchDockerEnvironment
+agents:
+  - name: claude-code
+    model_name: anthropic/sonnet
+    kwargs:
+      version: "2.1.314"
+      reasoning_effort: high
+      disable_web_search: true
+datasets:
+  - path: tasks-harbor

@@ -1,0 +1,11 @@
+# Credential-free lifecycle validation through the same native Harbor tasks.
+n_attempts: 1
+n_concurrent_trials: 3
+jobs_dir: jobs
+environment:
+  type: docker
+  import_path: surfbench.docker_environment:SurfbenchDockerEnvironment
+agents:
+  - name: oracle
+datasets:
+  - path: tasks-harbor

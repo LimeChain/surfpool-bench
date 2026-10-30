@@ -1,0 +1,26 @@
+{
+  "fixture_version": "0.1.0",
+  "seed": 5,
+  "provenance": "synthetic; deterministic local-only keys",
+  "decimals": 6,
+  "token_program": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+  "oracle_price_offset": 73,
+  "oracle_exponent": -8,
+  "pyth_feed_id": "0xef0d8b6fda2ceba41da15d4095d1da392a0d2f8ed0c6c7bc0f4cfac8c280b56d",
+  "sha256": {
+    "accounts.json": "4291a615f7f14c28535d56a107670c756c76206dcd43e7ab15a33697afd984d3",
+    "setup.json": "8a3ff3f064d0e3d57fd0b4ec7918e5ac20ceab36d744e373be0d7a76f6cab1d5",
+    "diagnosis.json": "e1d8256eca5afd82811580b4822494a8d46fdd2ed73e51f4591221f59c618aa5",
+    "base.json": "eebea727edfc8d7a7dcf9232e4fd5da15836a034484360bb58d2a80e301fae98",
+    "overlay.json": "fc3105736423bec3a665b266d50e30ca1692b9d8830f98a585bbca5be1086459",
+    "oracle.json": "389231af7560d58e808000c1a676373c3b353f7d9386d898da530d3aa5ffcbd8",
+    "alice-keypair.json": "6f802a09dd3782fccce5f9f1d22ff6c4f47c5268f87e50230080dca9d86323bf",
+    "bob-keypair.json": "3c0e9c4ceeed4188cd4619647e36f9cc5712b3b890edfcadfa8899067204351b",
+    "payer-keypair.json": "8ad2a135c7145bb1f43596536f2ffe322c79a80e2fc3fdae34c587a5ff666244",
+    "mint-keypair.json": "36ab6dfe68b9d440e6269de17ea8700d5b09f3e143e0574d890f21c6642f8a94",
+    "sentinel-keypair.json": "2b9f9d5dc1707b7ab78ea167e5e0ac238c32a61b9c5c3cfe918dbd8be2247c10",
+    "extra-keypair.json": "298a2ab7a93410babc5d5f0f0447064130bf92d8d088a334a6a6c71d36d71830",
+    "program-keypair.json": "47f29ff4f1b318e5e7c6a9e37a7a6150c071252fde0b5b96f84f6591776c8c98",
+    "counter-keypair.json": "75ad9c3ceae408976e40ed744bcbb223979384ac0ea894b569537c5a03ec13f2"
+  }
+}

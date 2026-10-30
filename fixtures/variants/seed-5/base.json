@@ -1,0 +1,18 @@
+{
+  "BDGzuvxPUCMJ9YySFdGDw6e1C6NtrU57iEKD9W57aTeZ": {
+    "lamports": 2000000000,
+    "owner": "11111111111111111111111111111111",
+    "executable": false,
+    "rentEpoch": 0,
+    "data": "",
+    "parsedData": null
+  },
+  "GPipMbAV8JUfXE81bWPAKXmzhP2k7gNYVWHA8CY333G9": {
+    "lamports": 2000000,
+    "owner": "7SxyNU3QAoV4jn8k4FTHP86LL8K4YtLqdUZcKRNAgvuJ",
+    "executable": false,
+    "rentEpoch": 0,
+    "data": "YmFzZS1zdGF0ZQ==",
+    "parsedData": null
+  }
+}

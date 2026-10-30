@@ -1,0 +1,32 @@
+[
+  {
+    "file": "rpc-cheatcodes.rs",
+    "source": "https://raw.githubusercontent.com/solana-foundation/surfpool/9be726da6456b58a3b39c099885c6c5904da4543/crates/core/src/rpc/surfnet_cheatcodes.rs",
+    "sha256": "9c39c95e2b7d79a744f093cc43560dbea3d3f6249c7f6ee4a277a3d969bcb7a0",
+    "matches_supplied_bytes": true
+  },
+  {
+    "file": "scenarios.md",
+    "source": "https://raw.githubusercontent.com/solana-foundation/surfpool/9be726da6456b58a3b39c099885c6c5904da4543/crates/core/src/scenarios/README.md",
+    "sha256": "a06a91f3a0560d1b5bc284a9198ca06f59a10801c56de8fcc78bc320a5418746",
+    "matches_supplied_bytes": true
+  },
+  {
+    "file": "mcp.md",
+    "source": "https://raw.githubusercontent.com/solana-foundation/surfpool/9be726da6456b58a3b39c099885c6c5904da4543/crates/mcp/README.md",
+    "sha256": "303f9cc65b37b633a9bddd3149e5e9f1cb22ca10d6635d13b131a0adbc2abd8a",
+    "matches_supplied_bytes": true
+  },
+  {
+    "file": "pyth-idl.json",
+    "source": "https://raw.githubusercontent.com/solana-foundation/surfpool/9be726da6456b58a3b39c099885c6c5904da4543/crates/core/src/scenarios/protocols/pyth/v2/idl.json",
+    "sha256": "93b29b6f60d6c50c39de3d3f075b0d9acf948633edef7234e6b1e2f9b397aa02",
+    "matches_supplied_bytes": true
+  },
+  {
+    "file": "pyth-overrides.yaml",
+    "source": "https://raw.githubusercontent.com/solana-foundation/surfpool/9be726da6456b58a3b39c099885c6c5904da4543/crates/core/src/scenarios/protocols/pyth/v2/overrides.yaml",
+    "sha256": "df0d364d909339d0aa35204f805ed36ed5bd7c186434355d0499ad3efba0479a",
+    "matches_supplied_bytes": true
+  }
+]

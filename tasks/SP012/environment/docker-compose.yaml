@@ -1,0 +1,11 @@
+services:
+  main:
+    platform: linux/amd64
+    cap_add: [SYS_PTRACE]
+    security_opt: ["seccomp=./seccomp.json"]
+  mainnet-proxy:
+    image: surfbench-proxy:0.1.1
+    platform: linux/amd64
+    networks: [default]
+    environment:
+      SURFBENCH_UPSTREAM_RPC: ${SURFBENCH_UPSTREAM_RPC:-https://api.mainnet-beta.solana.com}

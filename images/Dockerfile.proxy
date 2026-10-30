@@ -1,0 +1,4 @@
+FROM --platform=linux/amd64 python:3.12-bookworm@sha256:a5bab0ff300f91231c2e68bf73a8a8d60762ac39ce1c50eaf6803e4c38a9062b
+COPY src/surfbench/remote_proxy.py /opt/remote_proxy.py
+RUN mkdir /records
+ENTRYPOINT ["python", "/opt/remote_proxy.py"]

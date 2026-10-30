@@ -1,0 +1,50 @@
+{
+  "Eb32eSnG4eG526dBaRreyFiCqtPKL4PtPeS6TGcrDAzW": {
+    "lamports": 100000000000,
+    "owner": "11111111111111111111111111111111",
+    "executable": false,
+    "rentEpoch": 0,
+    "data": "",
+    "parsedData": null
+  },
+  "GPipMbAV8JUfXE81bWPAKXmzhP2k7gNYVWHA8CY333G9": {
+    "lamports": 2000000,
+    "owner": "7SxyNU3QAoV4jn8k4FTHP86LL8K4YtLqdUZcKRNAgvuJ",
+    "executable": false,
+    "rentEpoch": 0,
+    "data": "c3VyZmJlbmNoLXNlbnRpbmVsLXYx",
+    "parsedData": null
+  },
+  "4rZLyYNvF3V8mTPvNX5D1C7iryHFXysn8pcK7bU1MozM": {
+    "lamports": 2000000,
+    "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    "executable": false,
+    "rentEpoch": 0,
+    "data": "AQAAAMnf+JYDgujtg/TLZDgVQAyNxT6160MVBCyO/YXWwKPbAOH1BQAAAAAGAQEAAADJ3/iWA4Lo7YP0y2Q4FUAMjcU+tetDFQQsjv2F1sCj2w==",
+    "parsedData": null
+  },
+  "3GKGhgq6Ybj5R6sCfWmukaZnoc3sR6PJt9pqpk4nohPX": {
+    "lamports": 2000000,
+    "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    "executable": false,
+    "rentEpoch": 0,
+    "data": "OUUXpATjHpNpOlULj5gtgDkE557M8kGMWMtfyw+c8/aXue2z4linXp407fLegbzbZ1h5WodQaMLIEIk0X+YncgDh9QUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "parsedData": null
+  },
+  "9zSgNhUeAoBAQBEjC2pTSE9PGFTeGC1LaGkGGaqu4mNU": {
+    "lamports": 2000000,
+    "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    "executable": false,
+    "rentEpoch": 0,
+    "data": "OUUXpATjHpNpOlULj5gtgDkE557M8kGMWMtfyw+c8/Z45oDUkICr4ROGnxKIo7cwmtz7tM9do23DeePgLbnskAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "parsedData": null
+  },
+  "7UVimffxr9ow1uXYxsr4LHAcV58mLzhmwaeKvJ1pjLiE": {
+    "lamports": 2000000,
+    "owner": "rec5EKMGg6MxZYaMdyBfgwp4d5rB9T1VQH5pJv5LtFJ",
+    "executable": false,
+    "rentEpoch": 0,
+    "data": "IvEjY51+9M3J3/iWA4Lo7YP0y2Q4FUAMjcU+tetDFQQsjv2F1sCj2wHvDYtv2izrpB2hXUCV0do5Kg0vjtDGx7wPTPrIwoC1bQDkC1QCAAAAZAAAAAAAAAD4////APFTZQAAAAD/8FNlAAAAAADkC1QCAAAAZAAAAAAAAAAAAAAAAAAAAA==",
+    "parsedData": null
+  }
+}
